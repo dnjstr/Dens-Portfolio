@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react';
+import { Github, Linkedin, Facebook, ChevronDown } from 'lucide-react'
 import { personalInfo } from '../../data/portfolioData';
 
 const HeroSection = ({ isVisible, scrollToSection }) => {
@@ -28,8 +28,8 @@ const HeroSection = ({ isVisible, scrollToSection }) => {
           <a href={personalInfo.social.linkedin} className="p-3 bg-white border-2 border-gray-300 rounded-full hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1" aria-label="LinkedIn" style={{ boxShadow: '5px 5px 15px #bebebe, -5px -5px 15px #ffffff' }}>
             <Linkedin size={24} className="text-gray-700" />
           </a>
-          <a href={personalInfo.social.email} className="p-3 bg-white border-2 border-gray-300 rounded-full hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1" aria-label="Email" style={{ boxShadow: '5px 5px 15px #bebebe, -5px -5px 15px #ffffff' }}>
-            <Mail size={24} className="text-gray-700" />
+          <a href={personalInfo.social.facebook} className="p-3 bg-white border-2 border-gray-300 rounded-full hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1" aria-label="Facebook" style={{ boxShadow: '5px 5px 15px #bebebe, -5px -5px 15px #ffffff' }}>
+            <Facebook size={24} className="text-gray-700" />
           </a>
         </div>
         <button

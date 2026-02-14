@@ -41,7 +41,7 @@ export const personalInfo = {
   social: {
     github: 'https://github.com/dnjstr',
     linkedin: 'https://www.linkedin.com/in/den-jester-antonio-291214349/',
-    email: 'antonio.denjester28@gmail.com'
+    facebook: "https://www.facebook.com/denden.antonio.583"
   }
 };
 
