@@ -148,3 +148,150 @@ html {
     font-size: 14px;
   }
 }
+
+/* Stack Wrapper*/
+.stack-wrapper {
+  width: 100%;
+  max-width: 480px;
+  height: 620px;
+  position: relative;
+}
+
+/* Stack Container */
+.stack-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+.card-rotate {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+
+.card-rotate:active {
+  cursor: grabbing;
+}
+
+.card-rotate-disabled {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.card {
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Project Stack Card Styles */
+.project-stack-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 10px 10px 30px #bebebe, -10px -10px 30px #ffffff;
+  border: 3px solid #e5e7eb;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-image-container {
+  height: 220px;
+  overflow: hidden;
+  border-bottom: 4px solid #e5e7eb;
+  flex-shrink: 0;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.project-info {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.project-title {
+  font-size: 1.375rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.project-description {
+  color: #4b5563;
+  margin-bottom: 1rem;
+  text-align: justify;
+  line-height: 1.5;
+  flex: 1;
+  font-size: 0.9rem;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tech-tag {
+  padding: 0.4rem 0.7rem;
+  background: #f3f4f6;
+  border: 2px solid #d1d5db;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  color: #374151;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stack-wrapper {
+    max-width: 100%;
+    height: 550px;
+  }
+
+  .project-image-container {
+    height: 180px;
+  }
+
+  .project-info {
+    padding: 1.25rem;
+  }
+
+  .project-title {
+    font-size: 1.125rem;
+  }
+
+  .project-description {
+    font-size: 0.85rem;
+  }
+  
+  .tech-tag {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.6rem;
+  }
+}

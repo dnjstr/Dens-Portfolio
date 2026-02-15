@@ -1,9 +1,37 @@
 import React from 'react';
 import { Briefcase } from 'lucide-react';
 import { projects } from '../../data/portfolioData';
-import ProjectCard from '../ui/ProjectCard';
+import Stack from '../ui/Stack';
 
 const ProjectsSection = ({ isVisible }) => {
+  // Create card content from projects data
+  const projectCards = projects.map((project) => (
+    <div key={project.id} className="project-stack-card">
+      <div className="project-image-container">
+        <img 
+          src={project.image} 
+          alt={project.title}
+          className="project-image"
+        />
+      </div>
+      
+      <div className="project-info">
+        <h3 className="project-title">{project.title}</h3>
+        <p className="project-description">{project.description}</p>
+        <div className="project-tech">
+          {project.tech.map((tech) => (
+            <span key={tech} className="tech-tag">
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  ));
+
+  console.log('Projects:', projects); // Debug
+  console.log('Project Cards:', projectCards); // Debug
+
   return (
     <section id="projects" className="min-h-screen py-20 px-4 bg-gray-50">
       <div className={`max-w-6xl mx-auto transition-all duration-1000 ${
@@ -13,14 +41,21 @@ const ProjectsSection = ({ isVisible }) => {
           <h2 className="text-4xl font-bold mb-12 text-center text-gray-900">
             <Briefcase className="inline-block mr-2" /> Projects
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {projects.map((project, idx) => (
-              <ProjectCard 
-                key={project.id} 
-                project={project} 
-                delay={idx * 200} 
+          
+          <div className="flex justify-center">
+            <div className="stack-wrapper">
+              <Stack
+                cards={projectCards}
+                randomRotation={true}
+                sensitivity={150}
+                autoplay={true}
+                autoplayDelay={4000}
+                pauseOnHover={true}
+                sendToBackOnClick={true}
+                mobileClickOnly={true}
+                animationConfig={{ stiffness: 300, damping: 25 }}
               />
-            ))}
+            </div>
           </div>
         </div>
       </div>
