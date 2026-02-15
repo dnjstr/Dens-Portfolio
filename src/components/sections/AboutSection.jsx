@@ -4,6 +4,7 @@ import { personalInfo, skills } from '../../data/portfolioData';
 import SkillBar from '../ui/SkillBar';
 
 const AboutSection = ({ isVisible }) => {
+
   return (
     <section id="about" className="min-h-screen flex items-center py-20 px-4 bg-white">
       <div className={`max-w-6xl mx-auto transition-all duration-1000 ${
@@ -13,14 +14,27 @@ const AboutSection = ({ isVisible }) => {
           <h2 className="text-4xl font-bold mb-12 text-center text-gray-900">
             <Code className="inline-block mr-2" /> About Me
           </h2>
+          
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               {personalInfo.bio.map((paragraph, index) => (
-                <p key={index} className="text-lg text-gray-700 mb-6">
+                <p key={index} className="text-lg text-gray-700 mb-6 text-justify">
                   {paragraph}
                 </p>
               ))}
+              
+              <div className="mt-8">
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">GitHub Activity</h3>
+                <div className="border-4 border-gray-200 rounded-lg p-4 bg-gray-50">
+                  <img 
+                    src="https://ghchart.rshah.org/dnjstr"
+                    alt="GitHub Contribution Chart"
+                    className="w-full"
+                  />
+                </div>
+              </div>
             </div>
+            
             <div>
               <h3 className="text-2xl font-bold mb-6 text-gray-900">Skills</h3>
               {skills.map((skill, idx) => (

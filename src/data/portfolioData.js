@@ -23,12 +23,12 @@ export const projects = [
 ];
 
 export const skills = [
-  { name: 'React', level: 90 },
-  { name: 'TypeScript', level: 85 },
-  { name: 'Node.js', level: 80 },
-  { name: 'Python', level: 75 },
-  { name: 'MongoDB', level: 70 },
-  { name: 'AWS', level: 65 },
+  { name: 'React', level: 50 },
+  { name: 'TypeScript', level: 50 },
+  { name: 'Node.js', level: 50 },
+  { name: 'Python', level: 50 },
+  { name: 'MongoDB', level: 50 },
+  { name: 'AWS', level: 50 },
 ];
 
 export const personalInfo = {
