@@ -20,6 +20,13 @@ export const projects = [
     tech: ['ESP32', 'RFID', 'Flask', 'Express.js', 'Redis', 'React', 'TypeScript', 'Vite'],
     image: '/lens.png',
   },
+  {
+    id: 4,
+    title: 'Monster Typer',
+    description: 'A desktop typing defense game built with Java and Swing that uses object oriented programming, real time input checking, and a timer based movement system to improve typing speed and accuracy through interactive monster battles.',
+    tech: ['Java', 'Java Swing'],
+    image: '/monster-typer.png',
+  },
 ];
 
 export const skills = [

@@ -4,7 +4,6 @@ import { projects } from '../../data/portfolioData';
 import Stack from '../ui/Stack';
 
 const ProjectsSection = ({ isVisible }) => {
-  // Create card content from projects data
   const projectCards = projects.map((project) => (
     <div key={project.id} className="project-stack-card">
       <div className="project-image-container">
@@ -29,8 +28,8 @@ const ProjectsSection = ({ isVisible }) => {
     </div>
   ));
 
-  console.log('Projects:', projects); // Debug
-  console.log('Project Cards:', projectCards); // Debug
+  console.log('Projects:', projects);
+  console.log('Project Cards:', projectCards);
 
   return (
     <section id="projects" className="min-h-screen py-20 px-4 bg-gray-50">
