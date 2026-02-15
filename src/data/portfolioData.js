@@ -2,23 +2,23 @@ export const projects = [
   {
     id: 1,
     title: 'Movie Haven',
-    description: 'Full-stack online store with payment integration and admin dashboard',
-    tech: ['React', 'Node.js', 'MongoDB'],
-    gradient: 'from-purple-500 to-pink-500',
+    description: 'A movie recommendation web app built with React and TypeScript that uses the TMDB API to provide personalized movie suggestions based on user preferences and viewing history.',
+    tech: ['TypeScript', 'React', 'Node.js'],
+    image: '/movie-haven.png',
   },
   {
     id: 2,
     title: 'JIA Integrated Management System',
-    description: 'Collaborative project management tool with real-time updates',
-    tech: ['TypeScript', 'Tailwind CSS'],
-    gradient: 'from-blue-500 to-cyan-500',
+    description: 'A centralized business management system built with React and Node.js that uses Express APIs with SQLite and PostgreSQL synchronization to automate inventory, POS transactions, attendance tracking, and e wallet payment management.',
+    tech: ['React', 'Node.js', 'Express.js', 'SQLite', 'PostgreSQL'],
+    image: '/jia-system.png',
   },
   {
     id: 3,
     title: 'LENS',
-    description: 'Machine learning powered content creation tool',
-    tech: ['Python', 'React', 'TensorFlow', 'FastAPI'],
-    gradient: 'from-orange-500 to-red-500',
+    description: 'A web based RFID attendance system that uses ESP32 scanning, a Flask ingestion service, an Express.js API with Redis caching, and a React TypeScript frontend to automate secure library check in and log management.',
+    tech: ['ESP32', 'RFID', 'Flask', 'Express.js', 'Redis', 'React', 'TypeScript', 'Vite'],
+    image: '/lens.png',
   },
 ];
 

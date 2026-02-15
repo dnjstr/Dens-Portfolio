@@ -9,10 +9,17 @@ const ProjectCard = ({ project, delay }) => {
         boxShadow: '10px 10px 30px #bebebe, -10px -10px 30px #ffffff'
       }}
     >
-      <div className={`h-40 bg-gradient-to-br ${project.gradient} border-b-4 border-gray-200`}></div>
+      <div className="h-40 border-b-4 border-gray-200 overflow-hidden">
+        <img 
+          src={project.image} 
+          alt={project.title}
+          className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+        />
+      </div>
+      
       <div className="p-6">
         <h3 className="text-xl font-bold mb-2 text-gray-900">{project.title}</h3>
-        <p className="text-gray-600 mb-4">{project.description}</p>
+        <p className="text-gray-600 mb-4 text-justify">{project.description}</p>
         <div className="flex flex-wrap gap-2">
           {project.tech.map((tech) => (
             <span
